@@ -32,9 +32,19 @@ const styles = `
   .hero-btn-primary:hover { opacity: 0.88; }
 
   @media (max-width: 768px) {
-    .hero-title-text { font-size: 3.2rem !important; }
-    .hero-deco       { font-size: 50vw !important; }
-    .hero-stats-row  { flex-direction: row !important; gap: 2rem !important; }
+    .hero-title-text  { font-size: 3.2rem !important; }
+    .hero-deco        { font-size: 50vw !important; }
+    .hero-stats-row   { flex-direction: row !important; gap: 2rem !important; }
+    .hero-section     { padding: 6rem 0 3rem !important; }
+    .hero-content     { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+    .hero-btns        { flex-direction: column !important; }
+    .hero-btn-primary,
+    .hero-btn-ghost   { width: 100% !important; justify-content: center !important; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title-text { font-size: 2.5rem !important; }
+    .hero-section    { padding: 6rem 0 3rem !important; }
   }
 `;
 
@@ -44,6 +54,7 @@ export default function HeroSection() {
       <style>{styles}</style>
 
       <section
+        className="hero-section"
         style={{
           position: "relative",
           minHeight: "100vh",
@@ -96,6 +107,7 @@ export default function HeroSection() {
 
         {/* Content */}
         <div
+          className="hero-content"
           style={{
             position: "relative",
             zIndex: 2,

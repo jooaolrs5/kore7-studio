@@ -5,8 +5,8 @@ export default function HorariosSection() {
   const ref = useScrollReveal();
 
   return (
-    <section ref={ref} className="reveal py-20 bg-card">
-      <div className="container mx-auto px-4">
+    <section ref={ref} className="reveal section-padding bg-card">
+      <div className="container mx-auto">
         <div className="max-w-2xl mx-auto text-center">
           <Clock className="w-12 h-12 text-accent mx-auto mb-4" />
           <h2 className="text-primary mb-4">Horários de Funcionamento</h2>

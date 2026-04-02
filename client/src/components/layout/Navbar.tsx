@@ -10,6 +10,12 @@ const NAV_LINKS = [
 
 const WA_CTA = `https://wa.me/${WHATSAPP_NUMBER}?text=Olá!%20Quero%20agendar%20minha%20aula%20experimental%20no%20KORE7.`;
 
+const navStyles = `
+  @media (max-width: 768px) {
+    .navbar-inner { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+  }
+`;
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -20,6 +26,8 @@ export default function Navbar() {
   }, []);
 
   return (
+    <>
+    <style>{navStyles}</style>
     <nav
       className={`navbar${scrolled ? " scrolled" : ""}`}
       style={{
@@ -38,6 +46,7 @@ export default function Navbar() {
       }}
     >
       <div
+        className="navbar-inner"
         style={{
           maxWidth: "1280px",
           margin: "0 auto",
@@ -142,5 +151,6 @@ export default function Navbar() {
         </button>
       </div>
     </nav>
+    </>
   );
 }
