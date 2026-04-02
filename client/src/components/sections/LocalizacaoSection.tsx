@@ -7,9 +7,9 @@ export default function LocalizacaoSection() {
   const ref = useScrollReveal();
 
   return (
-    <section ref={ref} id="localizacao" className="reveal py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section ref={ref} id="localizacao" className="reveal section-padding">
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Left: Image */}
           <div className="relative h-96 md:h-full order-2 md:order-1">
             <img

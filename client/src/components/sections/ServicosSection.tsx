@@ -24,14 +24,14 @@ export default function ServicosSection() {
   const ref = useScrollReveal();
 
   return (
-    <section ref={ref} id="servicos" className="reveal py-20">
-      <div className="container mx-auto px-4">
+    <section ref={ref} id="servicos" className="reveal section-padding">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="subtitle text-accent mb-2">Nossas ofertas</p>
           <h2 className="text-primary mb-4">Serviços Disponíveis</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Left: Services List */}
           <div className="space-y-6">
             {servicos.map(({ title, description }) => (

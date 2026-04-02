@@ -27,8 +27,8 @@ export default function DiferenciaisSection() {
   const ref = useScrollReveal();
 
   return (
-    <section ref={ref} id="diferenciais" className="reveal py-20 bg-card">
-      <div className="container mx-auto px-4">
+    <section ref={ref} id="diferenciais" className="reveal section-padding bg-card">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="subtitle text-accent mb-2">Por que escolher</p>
           <h2 className="text-primary mb-4">O que nos diferencia</h2>
@@ -38,7 +38,7 @@ export default function DiferenciaisSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8">
           {diferenciais.map(({ icon: Icon, title, description }) => (
             <Card key={title} className="p-8 hover:shadow-lg transition-shadow border-border/50">
               <div className="mb-4">
