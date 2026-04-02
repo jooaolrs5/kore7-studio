@@ -3,178 +3,188 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-}
+/* ─────────────────────────────────────────────
+   KORE7 Design System — Dark Premium
+   Estética: Nike / Apple / boutique studios
+   Paleta: preto + cinzas escuros + branco + verde-limão
+   ───────────────────────────────────────────── */
 
 :root {
-  /* KORE7 Design System - Elegância Corporativa com Toque Humano */
-  /* Primary colors: Azul-marinho + Ouro + Teal */
-  --primary: #1a3a52;
-  --primary-foreground: #ffffff;
-  --sidebar-primary: #1a3a52;
-  --sidebar-primary-foreground: #ffffff;
-  --chart-1: #C9A961;
-  --chart-2: #2B7A8F;
-  --chart-3: #1a3a52;
-  --chart-4: #0f2438;
-  --chart-5: #3d5a73;
-  --radius: 0.5rem;
-  --background: #ffffff;
-  --foreground: #1a3a52;
-  --card: #f8f9fa;
-  --card-foreground: #1a3a52;
-  --popover: #ffffff;
-  --popover-foreground: #1a3a52;
-  --secondary: #2B7A8F;
-  --secondary-foreground: #ffffff;
-  --muted: #e8eef5;
-  --muted-foreground: #6b7c8f;
-  --accent: #C9A961;
-  --accent-foreground: #1a3a52;
-  --destructive: #dc2626;
-  --destructive-foreground: #ffffff;
-  --border: #d4dce8;
-  --input: #f8f9fa;
-  --ring: #1a3a52;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #1a3a52;
-  --sidebar-accent: #C9A961;
-  --sidebar-accent-foreground: #1a3a52;
-  --sidebar-border: #d4dce8;
-  --sidebar-ring: #1a3a52;
+  /* ── Cores de marca ── */
+  --black:   #0a0a0a;
+  --dark:    #111111;
+  --dark2:   #1a1a1a;
+  --dark3:   #222222;
+  --gray:    #888888;
+  --gray2:   #555555;
+  --light:   #e8e8e8;
+  --white:   #f5f5f0;
+  --accent:  #c8f248;
+  --accent2: #9bcc2a;
+
+  /* ── Tipografia ── */
+  --font-title: 'Barlow', sans-serif;
+  --font-body:  'Barlow', sans-serif;
+
+  /* ── Utilitários ── */
+  --transition: all 0.25s ease;
+  --radius: 2px;
+
+  /* ── Tokens shadcn/ui mapeados para a paleta KORE7 ── */
+  --radius-sm: var(--radius);
+  --radius-md: calc(var(--radius) + 2px);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+
+  --background:                   #0a0a0a;
+  --foreground:                   #f5f5f0;
+  --card:                         #1a1a1a;
+  --card-foreground:              #f5f5f0;
+  --popover:                      #1a1a1a;
+  --popover-foreground:           #f5f5f0;
+  --primary:                      #c8f248;
+  --primary-foreground:           #0a0a0a;
+  --secondary:                    #222222;
+  --secondary-foreground:         #f5f5f0;
+  --muted:                        #222222;
+  --muted-foreground:             #888888;
+  --accent:                       #c8f248;
+  --accent-foreground:            #0a0a0a;
+  --destructive:                  #ef4444;
+  --destructive-foreground:       #f5f5f0;
+  --border:                       #222222;
+  --input:                        #1a1a1a;
+  --ring:                         #c8f248;
+  --chart-1:                      #c8f248;
+  --chart-2:                      #9bcc2a;
+  --chart-3:                      #888888;
+  --chart-4:                      #555555;
+  --chart-5:                      #e8e8e8;
+  --sidebar:                      #111111;
+  --sidebar-foreground:           #f5f5f0;
+  --sidebar-primary:              #c8f248;
+  --sidebar-primary-foreground:   #0a0a0a;
+  --sidebar-accent:               #222222;
+  --sidebar-accent-foreground:    #f5f5f0;
+  --sidebar-border:               #222222;
+  --sidebar-ring:                 #c8f248;
 }
 
-.dark {
-  /* Dark mode - KORE7 */
-  --primary: #1a3a52;
-  --primary-foreground: #ffffff;
-  --sidebar-primary: #1a3a52;
-  --sidebar-primary-foreground: #ffffff;
-  --background: #0f1419;
-  --foreground: #f0f4f8;
-  --card: #1a2332;
-  --card-foreground: #f0f4f8;
-  --popover: #1a2332;
-  --popover-foreground: #f0f4f8;
-  --secondary: #2B7A8F;
-  --secondary-foreground: #ffffff;
-  --muted: #2a3d52;
-  --muted-foreground: #a0b0c0;
-  --accent: #C9A961;
-  --accent-foreground: #1a3a52;
-  --destructive: #f87171;
-  --destructive-foreground: #0f1419;
-  --border: #2a3d52;
-  --input: #1a2332;
-  --ring: #C9A961;
-  --chart-1: #C9A961;
-  --chart-2: #2B7A8F;
-  --chart-3: #1a3a52;
-  --chart-4: #3d5a73;
-  --chart-5: #5a7a9f;
-  --sidebar: #1a2332;
-  --sidebar-foreground: #f0f4f8;
-  --sidebar-accent: #C9A961;
-  --sidebar-accent-foreground: #1a3a52;
-  --sidebar-border: #2a3d52;
-  --sidebar-ring: #C9A961;
+/* ── Tailwind theme inline ── */
+@theme inline {
+  --radius-sm: var(--radius);
+  --radius-md: calc(var(--radius) + 2px);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+  --color-background:                var(--background);
+  --color-foreground:                var(--foreground);
+  --color-card:                      var(--card);
+  --color-card-foreground:           var(--card-foreground);
+  --color-popover:                   var(--popover);
+  --color-popover-foreground:        var(--popover-foreground);
+  --color-primary:                   var(--primary);
+  --color-primary-foreground:        var(--primary-foreground);
+  --color-secondary:                 var(--secondary);
+  --color-secondary-foreground:      var(--secondary-foreground);
+  --color-muted:                     var(--muted);
+  --color-muted-foreground:          var(--muted-foreground);
+  --color-accent:                    var(--accent);
+  --color-accent-foreground:         var(--accent-foreground);
+  --color-destructive:               var(--destructive);
+  --color-destructive-foreground:    var(--destructive-foreground);
+  --color-border:                    var(--border);
+  --color-input:                     var(--input);
+  --color-ring:                      var(--ring);
+  --color-chart-1:                   var(--chart-1);
+  --color-chart-2:                   var(--chart-2);
+  --color-chart-3:                   var(--chart-3);
+  --color-chart-4:                   var(--chart-4);
+  --color-chart-5:                   var(--chart-5);
+  --color-sidebar:                   var(--sidebar);
+  --color-sidebar-foreground:        var(--sidebar-foreground);
+  --color-sidebar-primary:           var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent:            var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border:            var(--sidebar-border);
+  --color-sidebar-ring:              var(--sidebar-ring);
+}
+
+/* ─────────────────────────────────────────────
+   RESET
+   ───────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Source Sans Pro', sans-serif;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora', serif;
-    font-weight: 700;
-  }
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-  h2 {
-    @apply text-3xl md:text-4xl;
-  }
-  h3 {
-    @apply text-2xl md:text-3xl;
-  }
-  .subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    @apply text-lg md:text-xl;
-  }
-  button:not(:disabled),
-  [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
-  }
 }
 
+/* ─────────────────────────────────────────────
+   BASE
+   ───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────────
+   TIPOGRAFIA
+   ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 5rem);    font-weight: 900; }
+h2 { font-size: clamp(2rem,   4vw, 3.5rem);   font-weight: 800; }
+h3 { font-size: clamp(1.5rem, 3vw, 2.25rem);  font-weight: 700; }
+
+p {
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────
+   CURSOR
+   ───────────────────────────────────────────── */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+[type="button"]:not(:disabled),
+[type="submit"]:not(:disabled),
+[type="reset"]:not(:disabled),
+a[href],
+select:not(:disabled),
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled) {
+  cursor: pointer;
+}
+
+/* ─────────────────────────────────────────────
+   LAYOUT
+   ───────────────────────────────────────────── */
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .flex {
@@ -182,18 +192,18 @@
     min-width: 0;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
   }
 }
