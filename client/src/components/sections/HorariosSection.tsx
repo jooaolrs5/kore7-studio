@@ -1,8 +1,11 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Clock } from "lucide-react";
 
 export default function HorariosSection() {
+  const ref = useScrollReveal();
+
   return (
-    <section className="py-20 bg-card">
+    <section ref={ref} className="reveal py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <Clock className="w-12 h-12 text-accent mx-auto mb-4" />

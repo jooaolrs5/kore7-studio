@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/const";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function CTASection() {
+  const ref = useScrollReveal();
+
   return (
-    <section className="py-20 bg-primary text-white relative overflow-hidden">
+    <section ref={ref} className="reveal py-20 bg-primary text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <img
           src="https://d2xsxph8kpxj0f.cloudfront.net/310519663377700058/Fgmy54taSGVi3KPEeesc5H/cta-section-jDuumwjMqjwzn2gD45dDsM.webp"

@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Shield, Users, Zap } from "lucide-react";
 
 const diferenciais = [
@@ -23,8 +24,10 @@ const diferenciais = [
 ];
 
 export default function DiferenciaisSection() {
+  const ref = useScrollReveal();
+
   return (
-    <section id="diferenciais" className="py-20 bg-card">
+    <section ref={ref} id="diferenciais" className="reveal py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="subtitle text-accent mb-2">Por que escolher</p>

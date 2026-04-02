@@ -1,3 +1,4 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { CheckCircle2 } from "lucide-react";
 
 const servicos = [
@@ -20,8 +21,10 @@ const servicos = [
 ];
 
 export default function ServicosSection() {
+  const ref = useScrollReveal();
+
   return (
-    <section id="servicos" className="py-20">
+    <section ref={ref} id="servicos" className="reveal py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="subtitle text-accent mb-2">Nossas ofertas</p>

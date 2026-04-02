@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/const";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { MapPin, MessageCircle, Phone } from "lucide-react";
 
 export default function LocalizacaoSection() {
+  const ref = useScrollReveal();
+
   return (
-    <section id="localizacao" className="py-20">
+    <section ref={ref} id="localizacao" className="reveal py-20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Image */}
