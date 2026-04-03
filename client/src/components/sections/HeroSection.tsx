@@ -77,7 +77,7 @@ export default function HeroSection() {
             position: "absolute",
             inset: 0,
             background:
-              "radial-gradient(ellipse 80% 70% at 60% 50%, rgba(200,242,72,0.06), transparent 70%)",
+              "radial-gradient(ellipse 80% 70% at 60% 50%, rgba(248,247,245,0.03), transparent 70%)",
             pointerEvents: "none",
             zIndex: 0,
           }}
@@ -132,7 +132,7 @@ export default function HeroSection() {
                 display: "block",
                 width: "32px",
                 height: "1px",
-                background: "var(--accent)",
+                background: "var(--off-white)",
               }}
             />
             <span
@@ -142,7 +142,7 @@ export default function HeroSection() {
                 fontWeight: 600,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase" as const,
-                color: "var(--accent)",
+                color: "var(--off-white)",
               }}
             >
               Studio Premium · São Luís
@@ -165,7 +165,7 @@ export default function HeroSection() {
             }}
           >
             Treine com{" "}
-            <span style={{ color: "var(--accent)" }}>estratégia.</span>
+            <span style={{ color: "var(--off-white)" }}>estratégia.</span>
             <br />
             Evolua com acompanhamento real.
           </h1>
@@ -200,7 +200,7 @@ export default function HeroSection() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                background: "var(--accent)",
+                background: "var(--off-white)",
                 color: "var(--black)",
                 fontFamily: "var(--font-body)",
                 fontSize: "0.85rem",
@@ -276,9 +276,9 @@ export default function HeroSection() {
                         marginBottom: "0.35rem",
                       }}
                     >
-                      {prefix && <span style={{ color: "var(--accent)" }}>{prefix}</span>}
+                      {prefix && <span style={{ color: "var(--off-white)" }}>{prefix}</span>}
                       {number}
-                      {suffix && <span style={{ color: "var(--accent)" }}>{suffix}</span>}
+                      {suffix && <span style={{ color: "var(--off-white)" }}>{suffix}</span>}
                     </div>
                     <div
                       style={{

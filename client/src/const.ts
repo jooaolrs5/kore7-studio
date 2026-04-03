@@ -1,6 +1,6 @@
 export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 
-export const WHATSAPP_NUMBER = "559898578934";
+export const WHATSAPP_NUMBER = "5598985789534";
 export const WHATSAPP_URL = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
