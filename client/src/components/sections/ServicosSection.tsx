@@ -38,7 +38,7 @@ const SERVICOS = [
     ordinal: "02",
     title: "TREINO EM TURMA REDUZIDA",
     description:
-      "Máximo 6 alunos por turma com acompanhamento profissional em cada sessão. O melhor dos dois mundos: grupo e atenção individual.",
+      "Máximo 4 alunos por turma com acompanhamento profissional em cada sessão. O melhor dos dois mundos: grupo e atenção individual.",
     icon: (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />

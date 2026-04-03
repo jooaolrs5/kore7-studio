@@ -228,7 +228,7 @@ export default function SobreSection() {
                 }}
               >
                 {[
-                  { number: "6",   label: "máx. por turma" },
+                  { number: "4",   label: "máx. por turma" },
                   { number: "1:1", label: "atenção individual" },
                 ].map(({ number, label }) => (
                   <div

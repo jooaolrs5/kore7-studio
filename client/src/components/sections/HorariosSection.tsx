@@ -131,7 +131,7 @@ export default function HorariosSection() {
               }}
             >
               De segunda a sexta, com horários agendados das 6h às 20h.
-              Turmas com no máximo 6 alunos. Vagas limitadas.
+              Turmas com no máximo 4 alunos. Vagas limitadas.
             </p>
           </div>
 
