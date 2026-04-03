@@ -45,8 +45,10 @@ const styles = `
     .hero-content   { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
     .hero-title-text { font-size: 2.8rem !important; line-height: 1.0 !important; }
     .hero-deco      { font-size: 55vw !important; }
-    .hero-stats-row { flex-direction: column !important; gap: 1rem !important; }
-    .hero-stat-sep  { display: none !important; }
+    .hero-stats-row { flex-direction: row !important; }
+    .hero-stat-sep  { display: block !important; margin: 0 1.25rem !important; }
+    .hero-stat-num  { font-size: 1.6rem !important; }
+    .hero-stat-label { font-size: 0.6rem !important; letter-spacing: 0.08em !important; }
     .hero-btns      { flex-direction: column !important; }
     .hero-btn-primary,
     .hero-btn-ghost { width: 100% !important; justify-content: center !important; }
@@ -262,13 +264,20 @@ export default function HeroSection() {
           <div className="hero-stats" style={{ marginTop: "4rem" }}>
             <div
               className="hero-stats-row"
-              style={{ display: "flex", flexDirection: "row" as const, gap: "2.5rem", alignItems: "center" }}
+              style={{ display: "flex", flexDirection: "row" as const, alignItems: "center" }}
             >
               {STATS.map(({ prefix, number, suffix, label }, i) => (
                 <>
-                  {i > 0 && <div key={`sep-${i}`} className="hero-stat-sep" />}
+                  {i > 0 && (
+                    <div
+                      key={`sep-${i}`}
+                      className="hero-stat-sep"
+                      style={{ margin: "0 2rem" }}
+                    />
+                  )}
                   <div key={label}>
                     <div
+                      className="hero-stat-num"
                       style={{
                         fontFamily: "var(--font-title)",
                         fontWeight: 900,
@@ -281,6 +290,7 @@ export default function HeroSection() {
                       {prefix}{number}{suffix}
                     </div>
                     <div
+                      className="hero-stat-label"
                       style={{
                         fontFamily: "var(--font-body)",
                         fontSize: "0.68rem",
