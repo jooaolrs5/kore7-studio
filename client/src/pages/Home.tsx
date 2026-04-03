@@ -6,12 +6,14 @@ import HeroSection from "@/components/sections/HeroSection";
 import HorariosSection from "@/components/sections/HorariosSection";
 import LocalizacaoSection from "@/components/sections/LocalizacaoSection";
 import ServicosSection from "@/components/sections/ServicosSection";
+import SobreSection from "@/components/sections/SobreSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       <HeroSection />
+      <SobreSection />
       <DiferenciaisSection />
       <ServicosSection />
       <HorariosSection />

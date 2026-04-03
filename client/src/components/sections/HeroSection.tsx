@@ -1,16 +1,15 @@
-import { WHATSAPP_NUMBER } from "@/const";
-
-const WA_CTA = `https://wa.me/${WHATSAPP_NUMBER}?text=Olá!%20Quero%20agendar%20minha%20aula%20experimental%20no%20KORE7.`;
+const WA_URL =
+  "https://wa.me/5598985789534?text=Olá!%20Quero%20agendar%20minha%20aula%20experimental%20gratuita%20no%20KORE7.";
 
 const STATS = [
   { prefix: "+", number: "200", suffix: "",  label: "Alunos ativos" },
   { prefix: "",  number: "8",   suffix: "+", label: "Anos de experiência" },
-  { prefix: "",  number: "98",  suffix: "%", label: "Taxa de satisfação" },
+  { prefix: "",  number: "98",  suffix: "%", label: "Satisfação" },
 ];
 
 const styles = `
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(32px); }
+    from { opacity: 0; transform: translateY(28px); }
     to   { opacity: 1; transform: translateY(0); }
   }
   @keyframes fadeIn {
@@ -18,32 +17,43 @@ const styles = `
     to   { opacity: 1; }
   }
 
-  .hero-label    { animation: fadeUp  0.9s ease both; animation-delay: 0.1s; }
-  .hero-title    { animation: fadeUp  0.9s ease both; animation-delay: 0.25s; }
-  .hero-sub      { animation: fadeUp  0.9s ease both; animation-delay: 0.4s; }
-  .hero-btns     { animation: fadeUp  0.9s ease both; animation-delay: 0.55s; }
-  .hero-stats    { animation: fadeIn  1.2s ease both; animation-delay: 0.8s; }
-  .hero-deco     { animation: fadeIn  1.2s ease both; animation-delay: 0.8s; }
+  .hero-label  { animation: fadeUp 0.8s ease both; animation-delay: 0.1s; }
+  .hero-title  { animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) both; animation-delay: 0.2s; }
+  .hero-sub    { animation: fadeUp 0.8s ease both; animation-delay: 0.35s; }
+  .hero-btns   { animation: fadeUp 0.8s ease both; animation-delay: 0.5s; }
+  .hero-stats  { animation: fadeIn 1s   ease both; animation-delay: 0.8s; }
+  .hero-deco   { animation: fadeIn 1.5s ease both; animation-delay: 1s; }
 
-  .hero-btn-ghost:hover {
-    border-color: rgba(255,255,255,0.6) !important;
-    color: var(--white) !important;
+  .hero-btn-primary:hover {
+    background: var(--white) !important;
+    transform: translateY(-2px);
   }
-  .hero-btn-primary:hover { opacity: 0.88; }
+  .hero-btn-ghost:hover {
+    border-color: rgba(255,255,255,0.5) !important;
+    background: rgba(255,255,255,0.04) !important;
+  }
+
+  .hero-stat-sep {
+    width: 1px;
+    align-self: stretch;
+    background: rgba(255,255,255,0.1);
+    flex-shrink: 0;
+  }
 
   @media (max-width: 768px) {
-    .hero-title-text  { font-size: 3.2rem !important; }
-    .hero-deco        { font-size: 50vw !important; }
-    .hero-stats-row   { flex-direction: row !important; gap: 2rem !important; }
-    .hero-section     { padding: 6rem 0 3rem !important; }
-    .hero-content     { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
-    .hero-btns        { flex-direction: column !important; }
+    .hero-section   { padding: 6rem 0 3rem !important; }
+    .hero-content   { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+    .hero-title-text { font-size: 2.8rem !important; line-height: 1.0 !important; }
+    .hero-deco      { font-size: 55vw !important; }
+    .hero-stats-row { flex-direction: column !important; gap: 1rem !important; }
+    .hero-stat-sep  { display: none !important; }
+    .hero-btns      { flex-direction: column !important; }
     .hero-btn-primary,
-    .hero-btn-ghost   { width: 100% !important; justify-content: center !important; }
+    .hero-btn-ghost { width: 100% !important; justify-content: center !important; }
   }
 
   @media (max-width: 480px) {
-    .hero-title-text { font-size: 2.5rem !important; }
+    .hero-title-text { font-size: 2.2rem !important; }
     .hero-section    { padding: 6rem 0 3rem !important; }
   }
 `;
@@ -60,26 +70,26 @@ export default function HeroSection() {
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
-          padding: "8rem 0 4rem",
+          padding: "8rem 0 5rem",
           background: "#0a0a0a",
           backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)
+            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
           `,
           backgroundSize: "80px 80px",
           overflow: "hidden",
         }}
       >
-        {/* Radial glow */}
+        {/* Vignette */}
         <div
           aria-hidden="true"
           style={{
             position: "absolute",
             inset: 0,
             background:
-              "radial-gradient(ellipse 80% 70% at 60% 50%, rgba(200,242,72,0.06), transparent 70%)",
+              "radial-gradient(ellipse 100% 100% at 50% 50%, transparent 40%, rgba(10,10,10,0.8) 100%)",
             pointerEvents: "none",
-            zIndex: 0,
+            zIndex: 1,
           }}
         />
 
@@ -92,12 +102,12 @@ export default function HeroSection() {
             right: "-0.02em",
             top: "50%",
             transform: "translateY(-50%)",
-            fontSize: "30vw",
+            fontSize: "32vw",
             fontFamily: "var(--font-title)",
             fontWeight: 900,
-            color: "rgba(255,255,255,0.025)",
+            color: "rgba(255,255,255,0.03)",
             pointerEvents: "none",
-            zIndex: 1,
+            zIndex: 0,
             lineHeight: 1,
             userSelect: "none",
           }}
@@ -130,22 +140,23 @@ export default function HeroSection() {
             <span
               style={{
                 display: "block",
-                width: "32px",
+                width: "36px",
                 height: "1px",
-                background: "var(--accent)",
+                background: "var(--off-white)",
+                flexShrink: 0,
               }}
             />
             <span
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.72rem",
+                fontSize: "0.7rem",
                 fontWeight: 600,
-                letterSpacing: "0.2em",
+                letterSpacing: "0.25em",
                 textTransform: "uppercase" as const,
-                color: "var(--accent)",
+                color: "var(--gray-light)",
               }}
             >
-              Studio Premium · São Luís
+              Studio Premium · São Luís, MA
             </span>
           </div>
 
@@ -154,30 +165,33 @@ export default function HeroSection() {
             className="hero-title hero-title-text"
             style={{
               fontFamily: "var(--font-title)",
-              fontWeight: 900,
-              fontSize: "clamp(3rem, 7vw, 6.5rem)",
+              fontSize: "clamp(2.8rem, 6.5vw, 6rem)",
               lineHeight: 0.95,
-              letterSpacing: "-0.02em",
-              textTransform: "uppercase",
-              color: "var(--white)",
-              maxWidth: "14ch",
+              letterSpacing: "-0.025em",
+              textTransform: "uppercase" as const,
               marginBottom: "1.75rem",
             }}
           >
-            Treine com{" "}
-            <span style={{ color: "var(--accent)" }}>estratégia.</span>
-            <br />
-            Evolua com acompanhamento real.
+            <span style={{ display: "block", color: "var(--white)", fontWeight: 900 }}>
+              Treine com estratégia.
+            </span>
+            <span style={{ display: "block", color: "var(--gray-light)", fontWeight: 300 }}>
+              Evolua com
+            </span>
+            <span style={{ display: "block", color: "var(--off-white)", fontWeight: 900 }}>
+              acompanhamento real.
+            </span>
           </h1>
 
           {/* Subtítulo */}
           <p
             className="hero-sub"
             style={{
-              fontSize: "clamp(1rem, 1.8vw, 1.2rem)",
-              color: "rgba(245,245,240,0.6)",
-              maxWidth: "520px",
-              lineHeight: 1.6,
+              fontSize: "clamp(0.95rem, 1.6vw, 1.1rem)",
+              fontWeight: 300,
+              color: "var(--text-muted)",
+              maxWidth: "480px",
+              lineHeight: 1.8,
               marginBottom: "2.5rem",
             }}
           >
@@ -192,7 +206,7 @@ export default function HeroSection() {
           >
             {/* Primário */}
             <a
-              href={WA_CTA}
+              href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="hero-btn-primary"
@@ -200,27 +214,20 @@ export default function HeroSection() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                background: "var(--accent)",
+                background: "var(--off-white)",
                 color: "var(--black)",
                 fontFamily: "var(--font-body)",
                 fontSize: "0.85rem",
                 fontWeight: 600,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase" as const,
-                padding: "0.85rem 1.75rem",
+                padding: "0.9rem 2rem",
                 borderRadius: "2px",
                 textDecoration: "none",
-                transition: "opacity 0.2s ease",
+                transition: "background 0.2s ease, transform 0.2s ease",
               }}
             >
-              {/* WhatsApp icon */}
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
               Agendar aula experimental
@@ -233,17 +240,18 @@ export default function HeroSection() {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                border: "1px solid rgba(255,255,255,0.25)",
+                background: "transparent",
+                border: "1px solid rgba(255,255,255,0.2)",
                 color: "var(--white)",
                 fontFamily: "var(--font-body)",
                 fontSize: "0.85rem",
                 fontWeight: 500,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase" as const,
-                padding: "0.85rem 1.75rem",
+                padding: "0.9rem 2rem",
                 borderRadius: "2px",
                 textDecoration: "none",
-                transition: "border-color 0.2s ease, color 0.2s ease",
+                transition: "border-color 0.2s ease, background 0.2s ease",
               }}
             >
               Conhecer o studio
@@ -251,50 +259,42 @@ export default function HeroSection() {
           </div>
 
           {/* Stats */}
-          <div
-            className="hero-stats"
-            style={{ marginTop: "4rem" }}
-          >
+          <div className="hero-stats" style={{ marginTop: "4rem" }}>
             <div
               className="hero-stats-row"
-              style={{
-                display: "flex",
-                flexDirection: "column" as const,
-                gap: "1.5rem",
-              }}
+              style={{ display: "flex", flexDirection: "row" as const, gap: "2.5rem", alignItems: "center" }}
             >
-              <div style={{ display: "flex", gap: "3rem", flexWrap: "wrap" as const }}>
-                {STATS.map(({ prefix, number, suffix, label }) => (
+              {STATS.map(({ prefix, number, suffix, label }, i) => (
+                <>
+                  {i > 0 && <div key={`sep-${i}`} className="hero-stat-sep" />}
                   <div key={label}>
                     <div
                       style={{
                         fontFamily: "var(--font-title)",
                         fontWeight: 900,
-                        fontSize: "2.5rem",
+                        fontSize: "2.2rem",
                         lineHeight: 1,
-                        color: "var(--white)",
+                        color: "var(--off-white)",
                         marginBottom: "0.35rem",
                       }}
                     >
-                      {prefix && <span style={{ color: "var(--accent)" }}>{prefix}</span>}
-                      {number}
-                      {suffix && <span style={{ color: "var(--accent)" }}>{suffix}</span>}
+                      {prefix}{number}{suffix}
                     </div>
                     <div
                       style={{
                         fontFamily: "var(--font-body)",
-                        fontSize: "0.78rem",
+                        fontSize: "0.68rem",
                         fontWeight: 500,
-                        letterSpacing: "0.08em",
+                        letterSpacing: "0.12em",
                         textTransform: "uppercase" as const,
-                        color: "rgba(245,245,240,0.5)",
+                        color: "var(--gray-mid)",
                       }}
                     >
                       {label}
                     </div>
                   </div>
-                ))}
-              </div>
+                </>
+              ))}
             </div>
           </div>
         </div>
