@@ -55,11 +55,11 @@ const SERVICOS = [
       "Sessão 1:1 com acompanhamento exclusivo. Ideal para quem tem objetivos específicos, lesões ou quer acelerar resultados.",
     icon: (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="5" r="2" />
-        <path d="M12 7v5" />
-        <path d="M5 10h4l1 5h4l1-5h4" />
-        <rect x="3" y="8" width="3" height="5" rx="1" />
-        <rect x="18" y="8" width="3" height="5" rx="1" />
+        <path d="M4 12h16" />
+        <path d="M4 8v8" />
+        <path d="M20 8v8" />
+        <path d="M2 9.5v5" />
+        <path d="M22 9.5v5" />
       </svg>
     ),
   },
@@ -70,8 +70,8 @@ const SERVICOS = [
       "Treinamento e orientação à distância, com acompanhamento próximo e metodologia KORE7 onde você estiver.",
     icon: (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-        <path d="M8 21h8M12 17v4" />
+        <polygon points="23 7 16 12 23 17 23 7" />
+        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
       </svg>
     ),
   },
