@@ -127,7 +127,6 @@ export default function HeroSection() {
             margin: "0 auto",
             padding: "0 2.5rem",
             width: "100%",
-            textAlign: "center",
           }}
         >
           {/* Label */}
@@ -136,7 +135,6 @@ export default function HeroSection() {
             style={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "center",
               gap: "1rem",
               marginBottom: "1.5rem",
             }}
@@ -197,7 +195,6 @@ export default function HeroSection() {
               maxWidth: "480px",
               lineHeight: 1.8,
               marginBottom: "2.5rem",
-              margin: "0 auto 2.5rem",
             }}
           >
             Studio de treinamento personalizado com acompanhamento próximo,
@@ -207,7 +204,7 @@ export default function HeroSection() {
           {/* Botões */}
           <div
             className="hero-btns"
-            style={{ display: "flex", gap: "1rem", flexWrap: "wrap" as const, justifyContent: "center" }}
+            style={{ display: "flex", gap: "1rem", flexWrap: "wrap" as const }}
           >
             {/* Primário */}
             <a
