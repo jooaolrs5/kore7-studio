@@ -17,6 +17,14 @@ const styles = `
     color: var(--white) !important;
   }
 
+  .loc-map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    filter: grayscale(100%) invert(92%) contrast(88%);
+  }
+
   @media (max-width: 768px) {
     .loc-grid  { grid-template-columns: 1fr !important; }
     .loc-map   { height: 280px !important; }
@@ -259,67 +267,25 @@ export default function LocalizacaoSection() {
               </div>
             </div>
 
-            {/* Coluna direita — placeholder mapa */}
+            {/* Coluna direita — Google Maps embed */}
             <div
               className="loc-map"
               style={{
                 width: "100%",
                 height: "400px",
-                background: "var(--bg-surface)",
                 border: "1px solid var(--border-light)",
                 borderRadius: "2px",
-                display: "flex",
-                flexDirection: "column" as const,
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "1rem",
+                overflow: "hidden",
               }}
             >
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-                style={{ color: "var(--gray-mid)" }}
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-
-              <span
-                style={{
-                  fontFamily: "var(--font-title)",
-                  fontWeight: 700,
-                  fontSize: "1rem",
-                  color: "var(--gray-light)",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                São Luís, MA
-              </span>
-
-              <a
-                href={MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="loc-maps-link"
-                style={{
-                  fontSize: "0.8rem",
-                  color: "var(--off-white)",
-                  fontFamily: "var(--font-body)",
-                  textDecoration: "none",
-                  letterSpacing: "0.05em",
-                  transition: "color 0.2s ease",
-                }}
-              >
-                Abrir no Google Maps ↗
-              </a>
-              {/* TODO: substituir por <iframe> do Google Maps embed */}
+              <iframe
+                className="loc-map-iframe"
+                src="https://maps.google.com/maps?q=Altos+do+Calhau+Center+São+Luís+MA&output=embed&hl=pt-BR&z=16"
+                title="Localização KORE7 Studio — Altos do Calhau, São Luís, MA"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
