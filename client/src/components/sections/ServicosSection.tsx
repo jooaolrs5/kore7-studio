@@ -1,22 +1,75 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { CheckCircle2 } from "lucide-react";
 
-const servicos = [
+const styles = `
+  .srv-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .srv-card:hover {
+    border-color: var(--border-light);
+    transform: translateY(-4px);
+  }
+`;
+
+const SERVICOS = [
   {
-    title: "Avaliação Física",
-    description: "Análise completa para entender seu ponto de partida e objetivos.",
+    ordinal: "01",
+    title: "AVALIAÇÃO FÍSICA",
+    description:
+      "Ponto de partida de todo aluno KORE7. Entendemos seu histórico, objetivos e condição atual para montar a melhor estratégia.",
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+        <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+        <path d="M9 12h6M9 16h4" />
+      </svg>
+    ),
   },
   {
-    title: "Treino em Turma Reduzida",
-    description: "Aulas em grupos pequenos com atenção personalizada do instrutor.",
+    ordinal: "02",
+    title: "TREINO EM TURMA REDUZIDA",
+    description:
+      "Máximo 6 alunos por turma com acompanhamento profissional em cada sessão. O melhor dos dois mundos: grupo e atenção individual.",
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
   },
   {
-    title: "Treino com Personal Trainer",
-    description: "Sessões individuais totalmente customizadas para seus objetivos.",
+    ordinal: "03",
+    title: "PERSONAL TRAINER",
+    description:
+      "Sessão 1:1 com acompanhamento exclusivo. Ideal para quem tem objetivos específicos, lesões ou quer acelerar resultados.",
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="5" r="2" />
+        <path d="M12 7v5" />
+        <path d="M5 10h4l1 5h4l1-5h4" />
+        <rect x="3" y="8" width="3" height="5" rx="1" />
+        <rect x="18" y="8" width="3" height="5" rx="1" />
+      </svg>
+    ),
   },
   {
-    title: "Consultoria Online",
-    description: "Orientação profissional à distância para sua evolução contínua.",
+    ordinal: "04",
+    title: "CONSULTORIA ONLINE",
+    description:
+      "Treinamento e orientação à distância, com acompanhamento próximo e metodologia KORE7 onde você estiver.",
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+        <path d="M8 21h8M12 17v4" />
+      </svg>
+    ),
   },
 ];
 
@@ -24,40 +77,142 @@ export default function ServicosSection() {
   const ref = useScrollReveal();
 
   return (
-    <section ref={ref} id="servicos" className="reveal section-padding">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <p className="subtitle text-accent mb-2">Nossas ofertas</p>
-          <h2 className="text-primary mb-4">Serviços Disponíveis</h2>
-        </div>
+    <>
+      <style>{styles}</style>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-          {/* Left: Services List */}
-          <div className="space-y-6">
-            {servicos.map(({ title, description }) => (
-              <div key={title} className="flex gap-4">
-                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-primary mb-1">{title}</h4>
-                  <p className="text-muted-foreground">{description}</p>
+      <section
+        ref={ref}
+        id="servicos"
+        className="reveal section-padding"
+        style={{ background: "var(--bg-primary)" }}
+      >
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 2rem",
+            width: "100%",
+          }}
+        >
+          {/* Header */}
+          <div style={{ marginBottom: "4rem" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.875rem",
+                marginBottom: "1.25rem",
+              }}
+            >
+              <span
+                style={{
+                  display: "block",
+                  width: "28px",
+                  height: "1px",
+                  background: "var(--gray-light)",
+                  flexShrink: 0,
+                }}
+              />
+              <span
+                style={{
+                  fontSize: "0.68rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.25em",
+                  textTransform: "uppercase" as const,
+                  color: "var(--gray-light)",
+                  fontFamily: "var(--font-body)",
+                }}
+              >
+                O que oferecemos
+              </span>
+            </div>
+
+            <h2
+              style={{
+                fontFamily: "var(--font-title)",
+                fontWeight: 900,
+                fontSize: "clamp(2rem, 4vw, 3.5rem)",
+                lineHeight: 1.0,
+                letterSpacing: "-0.02em",
+                textTransform: "uppercase" as const,
+                color: "var(--white)",
+                maxWidth: "18ch",
+              }}
+            >
+              Serviços para cada{" "}
+              <span style={{ color: "var(--off-white)" }}>objetivo.</span>
+            </h2>
+          </div>
+
+          {/* Grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: "1.5rem",
+            }}
+          >
+            {SERVICOS.map(({ ordinal, title, description, icon }) => (
+              <div key={title} className="srv-card">
+                {/* Número ordinal decorativo */}
+                <span
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    top: "1.5rem",
+                    right: "1.5rem",
+                    fontFamily: "var(--font-title)",
+                    fontWeight: 900,
+                    fontSize: "3rem",
+                    color: "rgba(240,237,232,0.06)",
+                    lineHeight: 1,
+                    userSelect: "none",
+                  }}
+                >
+                  {ordinal}
+                </span>
+
+                {/* Ícone */}
+                <div
+                  style={{
+                    color: "var(--off-white)",
+                    marginBottom: "1.5rem",
+                  }}
+                >
+                  {icon}
                 </div>
+
+                {/* Título */}
+                <h3
+                  style={{
+                    fontFamily: "var(--font-title)",
+                    fontWeight: 800,
+                    fontSize: "0.95rem",
+                    textTransform: "uppercase" as const,
+                    letterSpacing: "0.1em",
+                    color: "var(--white)",
+                    marginBottom: "0.75rem",
+                  }}
+                >
+                  {title}
+                </h3>
+
+                {/* Descrição */}
+                <p
+                  style={{
+                    fontSize: "0.9rem",
+                    color: "var(--text-secondary)",
+                    lineHeight: 1.75,
+                    fontWeight: 300,
+                  }}
+                >
+                  {description}
+                </p>
               </div>
             ))}
           </div>
-
-          {/* Right: Image */}
-          <div className="relative h-96 md:h-full">
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663377700058/Fgmy54taSGVi3KPEeesc5H/personal-training-G7kGtLiK4uLxGYS6PQWjBj.webp"
-              alt="Personal trainer trabalhando com cliente"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-              loading="lazy"
-              width="800"
-              height="600"
-            />
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
