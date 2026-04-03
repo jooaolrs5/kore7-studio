@@ -2,8 +2,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const styles = `
   .srv-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border);
+    background: #ffffff;
+    border: none;
     border-radius: 2px;
     padding: 2.5rem;
     position: relative;
@@ -11,8 +11,8 @@ const styles = `
     transition: var(--transition);
   }
   .srv-card:hover {
-    border-color: var(--border-light);
     transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
   }
 
   @media (max-width: 768px) {
@@ -162,7 +162,7 @@ export default function ServicosSection() {
                     fontFamily: "var(--font-title)",
                     fontWeight: 900,
                     fontSize: "3rem",
-                    color: "rgba(240,237,232,0.06)",
+                    color: "rgba(10,10,10,0.06)",
                     lineHeight: 1,
                     userSelect: "none",
                   }}
@@ -173,7 +173,7 @@ export default function ServicosSection() {
                 {/* Ícone */}
                 <div
                   style={{
-                    color: "var(--off-white)",
+                    color: "#0a0a0a",
                     marginBottom: "1.5rem",
                   }}
                 >
@@ -188,7 +188,7 @@ export default function ServicosSection() {
                     fontSize: "0.95rem",
                     textTransform: "uppercase" as const,
                     letterSpacing: "0.1em",
-                    color: "var(--white)",
+                    color: "#0a0a0a",
                     marginBottom: "0.75rem",
                   }}
                 >
@@ -199,7 +199,7 @@ export default function ServicosSection() {
                 <p
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-secondary)",
+                    color: "#444444",
                     lineHeight: 1.75,
                     fontWeight: 300,
                   }}
