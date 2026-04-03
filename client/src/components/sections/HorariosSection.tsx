@@ -44,9 +44,7 @@ const styles = `
 
   @media (max-width: 768px) {
     .hor-cta-btn { width: 100% !important; justify-content: center !important; }
-    .hor-turno-col { padding: 2rem 0 !important; }
-    .hor-turno-col:first-child { padding-top: 0 !important; }
-    .hor-turno-col:last-child  { padding-bottom: 0 !important; }
+    .hor-turno-col { padding: 1.75rem 1.25rem !important; gap: 1.25rem !important; }
   }
 `;
 
@@ -182,7 +180,6 @@ export default function HorariosSection() {
                       color: "var(--gray-light)",
                       textDecoration: "none",
                       transition: "color 0.2s ease",
-                      marginTop: "auto",
                     }}
                     onMouseEnter={e => (e.currentTarget.style.color = "var(--off-white)")}
                     onMouseLeave={e => (e.currentTarget.style.color = "var(--gray-light)")}
@@ -192,6 +189,7 @@ export default function HorariosSection() {
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </a>
+                  {/* spacer só no desktop para alinhar as colunas pela base */}
                 </div>
               </>
             ))}
