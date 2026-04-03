@@ -2,9 +2,9 @@ const WA_URL =
   "https://wa.me/5598985789534?text=Olá!%20Quero%20agendar%20minha%20aula%20experimental%20gratuita%20no%20KORE7.";
 
 const STATS = [
-  { prefix: "+", number: "200", suffix: "",  label: "Alunos ativos" },
-  { prefix: "",  number: "8",   suffix: "+", label: "Anos de experiência" },
-  { prefix: "",  number: "98",  suffix: "%", label: "Satisfação" },
+  { prefix: "",  number: "4",    suffix: "",  label: "Máx. por turma" },
+  { prefix: "",  number: "1:1",  suffix: "",  label: "Atenção individual" },
+  { prefix: "",  number: "100",  suffix: "%", label: "Personalizado" },
 ];
 
 const styles = `

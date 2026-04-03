@@ -228,7 +228,7 @@ export default function SobreSection() {
                 }}
               >
                 {[
-                  { number: "6",   label: "máx. por turma" },
+                  { number: "4",   label: "máx. por turma" },
                   { number: "1:1", label: "atenção individual" },
                 ].map(({ number, label }) => (
                   <div
@@ -281,22 +281,20 @@ export default function SobreSection() {
                   justifyContent: "center",
                 }}
               >
-                {/* Placeholder K7 */}
-                <span
+                {/* Placeholder — logo icon */}
+                <img
+                  src="/logo-icon.png"
+                  alt=""
                   aria-hidden="true"
                   style={{
-                    fontFamily: "var(--font-title)",
-                    fontWeight: 900,
-                    fontSize: "5rem",
-                    letterSpacing: "-0.02em",
-                    color: "var(--gray-mid)",
+                    width: "120px",
+                    height: "auto",
+                    opacity: 0.18,
                     userSelect: "none",
                     position: "relative",
                     zIndex: 1,
                   }}
-                >
-                  K7
-                </span>
+                />
 
                 {/* Gradient overlay */}
                 <div
