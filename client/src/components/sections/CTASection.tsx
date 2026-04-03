@@ -10,8 +10,11 @@ export default function CTASection() {
       <div className="absolute inset-0 opacity-10">
         <img
           src="https://d2xsxph8kpxj0f.cloudfront.net/310519663377700058/Fgmy54taSGVi3KPEeesc5H/cta-section-jDuumwjMqjwzn2gD45dDsM.webp"
-          alt="Background"
+          alt="Fundo da seção de chamada para ação"
           className="w-full h-full object-cover"
+          loading="lazy"
+          width="1200"
+          height="600"
         />
       </div>
       <div className="container mx-auto relative z-10">

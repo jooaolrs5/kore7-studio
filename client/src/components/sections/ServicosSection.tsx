@@ -51,6 +51,9 @@ export default function ServicosSection() {
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663377700058/Fgmy54taSGVi3KPEeesc5H/personal-training-G7kGtLiK4uLxGYS6PQWjBj.webp"
               alt="Personal trainer trabalhando com cliente"
               className="w-full h-full object-cover rounded-lg shadow-lg"
+              loading="lazy"
+              width="800"
+              height="600"
             />
           </div>
         </div>

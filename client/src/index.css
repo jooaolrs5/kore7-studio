@@ -209,6 +209,14 @@ input[type="radio"]:not(:disabled) {
 }
 
 /* ─────────────────────────────────────────────
+   ACESSIBILIDADE
+   ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #c8f248;
+  outline-offset: 3px;
+}
+
+/* ─────────────────────────────────────────────
    SECTION PADDING — responsivo
    ───────────────────────────────────────────── */
 .section-padding {

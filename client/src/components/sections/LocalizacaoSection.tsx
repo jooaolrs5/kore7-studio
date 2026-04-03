@@ -16,6 +16,9 @@ export default function LocalizacaoSection() {
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663377700058/Fgmy54taSGVi3KPEeesc5H/studio-interior-PBuLwcJhwcZjFxigT32uaL.webp"
               alt="Interior do estúdio KORE7"
               className="w-full h-full object-cover rounded-lg shadow-lg"
+              loading="lazy"
+              width="800"
+              height="600"
             />
           </div>
 

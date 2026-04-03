@@ -29,6 +29,8 @@ export default function Navbar() {
     <>
     <style>{navStyles}</style>
     <nav
+      role="navigation"
+      aria-label="Navegação principal"
       className={`navbar${scrolled ? " scrolled" : ""}`}
       style={{
         position: "fixed",
