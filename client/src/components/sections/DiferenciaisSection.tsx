@@ -15,7 +15,7 @@ const styles = `
   }
 
   @media (max-width: 768px) {
-    .dif-grid { grid-template-columns: 1fr !important; }
+    .dif-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
   }
   @media (min-width: 480px) and (max-width: 768px) {
     .dif-grid { grid-template-columns: repeat(2, 1fr) !important; }
@@ -85,14 +85,7 @@ export default function DiferenciaisSection() {
         className="reveal section-padding"
         style={{ background: "var(--bg-surface)" }}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 2rem",
-            width: "100%",
-          }}
-        >
+        <div className="section-inner">
           {/* Header */}
           <div style={{ marginBottom: "4rem" }}>
             <div

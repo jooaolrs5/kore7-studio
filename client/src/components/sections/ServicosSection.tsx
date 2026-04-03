@@ -14,6 +14,10 @@ const styles = `
     border-color: var(--border-light);
     transform: translateY(-4px);
   }
+
+  @media (max-width: 768px) {
+    .srv-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  }
 `;
 
 const SERVICOS = [
@@ -86,14 +90,7 @@ export default function ServicosSection() {
         className="reveal section-padding"
         style={{ background: "var(--bg-primary)" }}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 2rem",
-            width: "100%",
-          }}
-        >
+        <div className="section-inner">
           {/* Header */}
           <div style={{ marginBottom: "4rem" }}>
             <div
@@ -146,6 +143,7 @@ export default function ServicosSection() {
 
           {/* Grid */}
           <div
+            className="srv-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",

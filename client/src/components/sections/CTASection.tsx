@@ -8,6 +8,11 @@ const styles = `
     background: var(--gray-dark) !important;
     transform: translateY(-2px);
   }
+
+  @media (max-width: 768px) {
+    .cta-section { padding: 6rem 1.5rem !important; }
+    .cta-btn     { width: 100% !important; justify-content: center !important; }
+  }
 `;
 
 export default function CTASection() {
@@ -20,7 +25,7 @@ export default function CTASection() {
       <section
         ref={ref}
         id="aula-experimental"
-        className="reveal"
+        className="reveal cta-section"
         style={{
           background: "var(--off-white)",
           padding: "10rem 2rem",

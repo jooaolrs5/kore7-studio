@@ -23,7 +23,9 @@ const styles = `
   .footer-wa-link:hover { color: var(--gray-light); }
 
   @media (max-width: 768px) {
-    .footer-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+    .footer-grid             { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+    .footer-grid > div       { text-align: center; }
+    .footer-wa-link          { justify-content: center; }
   }
 `;
 
@@ -47,14 +49,7 @@ export default function Footer() {
           padding: "5rem 0 2.5rem",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 2rem",
-            width: "100%",
-          }}
-        >
+        <div className="section-inner">
           {/* Grid 3 colunas */}
           <div
             className="footer-grid"
