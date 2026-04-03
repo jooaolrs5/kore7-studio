@@ -20,7 +20,8 @@ const styles = `
   }
 
   @media (max-width: 768px) {
-    .hor-grid { grid-template-columns: 1fr !important; }
+    .hor-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+    .hor-btn  { width: 100% !important; display: block !important; text-align: center !important; }
   }
 `;
 
@@ -69,14 +70,7 @@ export default function HorariosSection() {
         className="reveal section-padding"
         style={{ background: "var(--bg-surface)" }}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 2rem",
-            width: "100%",
-          }}
-        >
+        <div className="section-inner">
           {/* Header */}
           <div style={{ marginBottom: "4rem" }}>
             <div

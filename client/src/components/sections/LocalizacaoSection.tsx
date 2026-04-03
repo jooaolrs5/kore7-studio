@@ -39,14 +39,7 @@ export default function LocalizacaoSection() {
         className="reveal section-padding"
         style={{ background: "var(--bg-primary)" }}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 2rem",
-            width: "100%",
-          }}
-        >
+        <div className="section-inner">
           {/* Header */}
           <div style={{ marginBottom: "4rem" }}>
             <div

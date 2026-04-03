@@ -22,16 +22,11 @@ const styles = `
   }
 
   @media (max-width: 768px) {
-    .sobre-grid {
-      grid-template-columns: 1fr !important;
-    }
-    .sobre-visual-wrap {
-      margin-top: 3rem;
-    }
-    .sobre-cards {
-      top: -1rem !important;
-      right: -0.5rem !important;
-    }
+    .sobre-section     { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+    .sobre-grid        { grid-template-columns: 1fr !important; gap: 3rem !important; }
+    .sobre-visual-wrap { margin-top: 0; }
+    .sobre-cards       { flex-direction: row !important; top: -1rem !important; right: -0.5rem !important; gap: 0.5rem !important; }
+    .sobre-btn         { width: 100% !important; text-align: center !important; display: block !important; }
   }
 `;
 
@@ -45,20 +40,13 @@ export default function SobreSection() {
       <section
         ref={ref}
         id="sobre"
-        className="reveal"
+        className="reveal sobre-section"
         style={{
           padding: "10rem 0",
           background: "var(--bg-primary)",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 2rem",
-            width: "100%",
-          }}
-        >
+        <div className="section-inner">
           <div
             className="sobre-grid"
             style={{

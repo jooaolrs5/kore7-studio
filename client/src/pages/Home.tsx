@@ -10,7 +10,7 @@ import SobreSection from "@/components/sections/SobreSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Navbar />
       <HeroSection />
       <SobreSection />
