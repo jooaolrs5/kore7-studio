@@ -66,18 +66,15 @@ export default function Footer() {
                 href="/"
                 style={{
                   display: "inline-block",
-                  fontFamily: "var(--font-title)",
-                  fontWeight: 900,
-                  fontSize: "1.3rem",
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  color: "var(--white)",
                   textDecoration: "none",
-                  lineHeight: 1,
                   marginBottom: "0.75rem",
                 }}
               >
-                KORE<span style={{ color: "var(--off-white)" }}>7</span>
+                <img
+                  src="/logo-horizontal.png"
+                  alt="KORE7 Studio"
+                  style={{ height: "28px", width: "auto", display: "block" }}
+                />
               </a>
               <p
                 style={{

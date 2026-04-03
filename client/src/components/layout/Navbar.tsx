@@ -42,28 +42,17 @@ const styles = `
   /* Logo */
   .navbar-logo {
     text-decoration: none;
-    font-family: var(--font-title);
-    font-weight: 900;
-    font-size: 1.4rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--white);
+    display: inline-flex;
+    align-items: center;
     line-height: 1;
   }
-  .navbar-logo-seven {
-    color: var(--off-white);
-    position: relative;
-    display: inline-block;
-  }
-  .navbar-logo-seven::after {
-    content: '';
+  .navbar-logo img {
+    height: 30px;
+    width: auto;
     display: block;
-    width: 100%;
-    height: 2px;
-    background: var(--off-white);
-    position: absolute;
-    bottom: -2px;
-    left: 0;
+  }
+  .navbar.scrolled .navbar-logo img {
+    height: 26px;
   }
 
   /* Nav links */
@@ -131,7 +120,7 @@ export default function Navbar() {
 
           {/* ── Logo ── */}
           <a href="/" className="navbar-logo">
-            KORE<span className="navbar-logo-seven">7</span>
+            <img src="/logo-horizontal.png" alt="KORE7 Studio" />
           </a>
 
           {/* ── Desktop nav ── */}
