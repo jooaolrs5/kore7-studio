@@ -22,6 +22,8 @@ const styles = `
     transition: color 0.2s ease;
   }
   .footer-wa-link:hover { color: var(--gray-light); }
+  .footer-credit-link { color: rgba(255,255,255,0.18); text-decoration: none; transition: color 0.2s ease; }
+  .footer-credit-link:hover { color: var(--white); }
   @media (max-width: 768px) {
     .footer-grid             { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
     .footer-grid > div       { text-align: center; }
@@ -104,7 +106,7 @@ export default function Footer() {
             </p>
             <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.18)", fontFamily: "var(--font-body)", fontWeight: 300 }}>
               Site desenvolvido por{" "}
-              <a href="https://joaosilvacreative.com.br" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.18)", textDecoration: "none", transition: "color 0.2s ease" }} onMouseEnter={e => (e.currentTarget.style.color = "var(--white)")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.18)")}>
+              <a href="https://joaosilvacreative.com.br" target="_blank" rel="noopener noreferrer" className="footer-credit-link">
                 João Silva Creative
               </a>
             </p>
