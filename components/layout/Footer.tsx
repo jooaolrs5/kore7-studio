@@ -98,9 +98,15 @@ export default function Footer() {
             </div>
           </div>
 
-          <div style={{ borderTop: "1px solid rgba(255,255,255,0.04)", marginTop: "4rem", paddingTop: "2rem", textAlign: "center" }}>
+          <div style={{ borderTop: "1px solid rgba(255,255,255,0.04)", marginTop: "4rem", paddingTop: "2rem", textAlign: "center", display: "flex", flexDirection: "column", gap: "0.4rem", alignItems: "center" }}>
             <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.18)", fontFamily: "var(--font-body)", fontWeight: 300 }}>
               © 2026 KORE7 Studio. Todos os direitos reservados.
+            </p>
+            <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.18)", fontFamily: "var(--font-body)", fontWeight: 300 }}>
+              Site desenvolvido por{" "}
+              <a href="https://joaosilvacreative.com.br" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.18)", textDecoration: "none", transition: "color 0.2s ease" }} onMouseEnter={e => (e.currentTarget.style.color = "var(--white)")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.18)")}>
+                João Silva Creative
+              </a>
             </p>
           </div>
         </div>
