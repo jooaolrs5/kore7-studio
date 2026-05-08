@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://kore7studio.com.br";
+const BASE_URL = "https://www.kore7studio.com.br";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/_next/"],
+        disallow: ["/api/", "/_next/static/", "/opengraph-image"],
       },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,

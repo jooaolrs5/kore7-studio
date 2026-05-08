@@ -10,6 +10,27 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
 
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "kore7studio.com.br" }],
+        destination: "https://www.kore7studio.com.br/:path*",
+        permanent: true,
+      },
+      {
+        source: "/index.html",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/client/index.html",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

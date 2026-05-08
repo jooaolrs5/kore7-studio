@@ -9,7 +9,7 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const BASE_URL = "https://kore7studio.com.br";
+const BASE_URL = "https://www.kore7studio.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -175,15 +175,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema).replace(/&/g, '\\u0026') }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema).replace(/&/g, '\\u0026') }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/&/g, '\\u0026') }}
         />
       </head>
       <body>{children}</body>
