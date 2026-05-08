@@ -14,8 +14,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "kore7studio.com.br" }],
-        destination: "https://www.kore7studio.com.br/:path*",
+        has: [{ type: "host", value: "kore7.com.br" }],
+        destination: "https://www.kore7.com.br/:path*",
         permanent: true,
       },
       {

@@ -9,7 +9,7 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const BASE_URL = "https://www.kore7studio.com.br";
+const BASE_URL = "https://www.kore7.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
